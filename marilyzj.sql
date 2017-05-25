@@ -1,0 +1,263 @@
+-- --------------------------------------------------------
+-- 主机:                           127.0.0.1
+-- 服务器版本:                        5.6.26 - MySQL Community Server (GPL)
+-- 服务器操作系统:                      Win32
+-- HeidiSQL 版本:                  9.3.0.4984
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- 导出 marilyzj 的数据库结构
+CREATE DATABASE IF NOT EXISTS `marilyzj` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `marilyzj`;
+
+
+-- 导出  表 marilyzj.admin 结构
+CREATE TABLE IF NOT EXISTS `admin` (
+  `adminId` varchar(50) DEFAULT NULL,
+  `adminName` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `remark` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  marilyzj.admin 的数据：~1 rows (大约)
+DELETE FROM `admin`;
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` (`adminId`, `adminName`, `password`, `remark`) VALUES
+	('1', 'admin', 'admin', NULL);
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+
+
+-- 导出  表 marilyzj.deptrepair 结构
+CREATE TABLE IF NOT EXISTS `deptrepair` (
+  `deptsId` varchar(50) DEFAULT NULL,
+  `repairItemsId` varchar(50) DEFAULT NULL,
+  `id` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  marilyzj.deptrepair 的数据：~17 rows (大约)
+DELETE FROM `deptrepair`;
+/*!40000 ALTER TABLE `deptrepair` DISABLE KEYS */;
+INSERT INTO `deptrepair` (`deptsId`, `repairItemsId`, `id`) VALUES
+	('FA7844103F894032B92E3038AC225E62', '204', '14'),
+	('579967EFF17A4C0EB23DADEF5F903FE4', '101', '3'),
+	('1E16939DEEF2456BBE974CD2AA24AF6F', '101', '4'),
+	('D5CE02D4053540088CDE1888D2FADD71', '205', '15'),
+	('FA7844103F894032B92E3038AC225E62', '20102', '9'),
+	('FA7844103F894032B92E3038AC225E62', '102', '6'),
+	('579967EFF17A4C0EB23DADEF5F903FE4', '1', '1'),
+	('579967EFF17A4C0EB23DADEF5F903FE4', '206', '16'),
+	('D5CE02D4053540088CDE1888D2FADD71', '207', '17'),
+	('D5CE02D4053540088CDE1888D2FADD71', '202', '10'),
+	('D5CE02D4053540088CDE1888D2FADD71', '20101', '8'),
+	('1E16939DEEF2456BBE974CD2AA24AF6F', '203', '13'),
+	('1E16939DEEF2456BBE974CD2AA24AF6F', '202', '11'),
+	('1E16939DEEF2456BBE974CD2AA24AF6F', '102', '5'),
+	('1E16939DEEF2456BBE974CD2AA24AF6F', '1', '2'),
+	('FA7844103F894032B92E3038AC225E62', '203', '12'),
+	('579967EFF17A4C0EB23DADEF5F903FE4', '2', '7');
+/*!40000 ALTER TABLE `deptrepair` ENABLE KEYS */;
+
+
+-- 导出  表 marilyzj.depts 结构
+CREATE TABLE IF NOT EXISTS `depts` (
+  `deptId` varchar(100) NOT NULL,
+  `deptName` varchar(100) DEFAULT NULL,
+  `deptAddress` varchar(100) DEFAULT NULL,
+  `deptPhone` varchar(100) DEFAULT NULL,
+  `deptEmail` varchar(100) DEFAULT NULL,
+  `deptDesc` varchar(500) DEFAULT NULL,
+  `deptLevel` int(10) DEFAULT '0',
+  `remark` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  marilyzj.depts 的数据：~4 rows (大约)
+DELETE FROM `depts`;
+/*!40000 ALTER TABLE `depts` DISABLE KEYS */;
+INSERT INTO `depts` (`deptId`, `deptName`, `deptAddress`, `deptPhone`, `deptEmail`, `deptDesc`, `deptLevel`, `remark`) VALUES
+	('D5CE02D4053540088CDE1888D2FADD71', '陕西4s', '唐延路', '1101011', '1111@qq.com', '唐延路', 3, NULL),
+	('1E16939DEEF2456BBE974CD2AA24AF6F', '草滩4s', '苏席村', '12332123', '231@qq.com', '苏席路', 4, NULL),
+	('579967EFF17A4C0EB23DADEF5F903FE4', '万达4S', '万达广场', '231321', '21344@qq.com', '万达广场', 5, NULL),
+	('FA7844103F894032B92E3038AC225E62', '西安4s', '阳光大道', '12821893', '2222@qq.com', '阳光路', 2, NULL);
+/*!40000 ALTER TABLE `depts` ENABLE KEYS */;
+
+
+-- 导出  表 marilyzj.orderrepair 结构
+CREATE TABLE IF NOT EXISTS `orderrepair` (
+  `orderId` varchar(50) DEFAULT NULL,
+  `orderRepairId` varchar(50) DEFAULT NULL,
+  `repairItemsId` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  marilyzj.orderrepair 的数据：~21 rows (大约)
+DELETE FROM `orderrepair`;
+/*!40000 ALTER TABLE `orderrepair` DISABLE KEYS */;
+INSERT INTO `orderrepair` (`orderId`, `orderRepairId`, `repairItemsId`) VALUES
+	('EECDA2F8AFA34318AADCFBCE139C221B', '1', '1'),
+	('A7CFC8EAC918422AA3F9EEEA0569A310', '2', '1'),
+	('55F56EFF685448808DB1858CE201F137', '3', '1'),
+	('BA2FBFFBC05D4B969112481A1A3D5F05', '4', '1'),
+	('572ACC80C8EB422E9BBEE3AD45FD992A', '5', '1'),
+	('27C974AC866A4774889780C1C8DD99AE', '6', '1'),
+	('53EC75B43A9C4BEC98B1F5EA4F86CBBF', '7', '1'),
+	('1F228A6FA9CB4D68B8D2193D06B2BE10', '10', '1'),
+	('A1B9B20BE35D4DE4A3FE66EC41676931', '11', '1'),
+	('03A01286CB69458D9632CA02BFA89852', '12', '1'),
+	('E58B71F93DEB4C63AFF8CFE8E8F8C3BB', '13', '1'),
+	('A70B35F7044E4628942FBE15FDAA0DD9', '14', '1'),
+	('3E7F4D83C29B402EACD613D03FE9FF36', '15', '1'),
+	('F76955EDB5BA422F8684484ED98B1BC3', '16', '1'),
+	('065D50E7EDA046ED84C7CA84767CCBAE', '17', '1'),
+	('C457889980914A728FA52D91A5D63CAC', '18', '1'),
+	('BE505174A34F43A5AA3A0638D24B8578', '3704D8A6C60F4CAB8172BA3BC13967E9', '204'),
+	('D902B0628D574A20A0D59C0C6F2749EB', 'A472597BD6D7431C951D59DCF5BF2B01', '101'),
+	('E1B81E34830D4B4CA18CF9326D3D5061', 'F3989180F3864C749E24569D74A412E4', '204'),
+	('AE739013FC37400BB334F688C4FE977B', '5AD3F95B7A104B7F850BDE839DC353FF', '101'),
+	('68DFD98E184D47FC9BE3FA76279B017D', 'A6E36EE1AD054049A6383C99C865B396', '207'),
+	('8A86042B9C824298AD2595AAF4101E51', '5A69B2CE50D7443FABB69BD01580849A', '205');
+/*!40000 ALTER TABLE `orderrepair` ENABLE KEYS */;
+
+
+-- 导出  表 marilyzj.orders 结构
+CREATE TABLE IF NOT EXISTS `orders` (
+  `orderId` varchar(50) NOT NULL,
+  `deptId` varchar(50) DEFAULT NULL,
+  `userId` varchar(50) DEFAULT NULL,
+  `userName` varchar(50) DEFAULT NULL,
+  `orderData` varchar(50) DEFAULT NULL,
+  `orderName` varchar(50) DEFAULT NULL,
+  `payStatus` varchar(50) DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  `remark` varchar(100) DEFAULT NULL,
+  `phone` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`orderId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  marilyzj.orders 的数据：~24 rows (大约)
+DELETE FROM `orders`;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` (`orderId`, `deptId`, `userId`, `userName`, `orderData`, `orderName`, `payStatus`, `price`, `remark`, `phone`, `email`) VALUES
+	('03A01286CB69458D9632CA02BFA89852', '2', '1', 'jiachao', '2017-09-09', '常规保养', '1', 1233, '00', '199', 'jiachao@qq.com'),
+	('065D50E7EDA046ED84C7CA84767CCBAE', '2', '1', 'jiachao', '2017-09-09', '常规保养', '1', 1233, '00', '199', 'jiachao@qq.com'),
+	('1F228A6FA9CB4D68B8D2193D06B2BE10', '2', '1', 'jiachao', '2017-09-09', '常规保养', '3', 1233, '00', '199', 'jiachao@qq.com'),
+	('27C974AC866A4774889780C1C8DD99AE', '2', '1', 'jiachao', '2017-09-09', '常规保养', '3', 1233, '00', '199', 'jiachao@qq.com'),
+	('31D5B58934B44A69AAF3618E3FDD54DB', '2', '1', 'jiachao', '2017-09-09', '常规保养', '1', 1233, '00', '199', 'jiachao@qq.com'),
+	('3E7F4D83C29B402EACD613D03FE9FF36', '2', '1', 'jiachao', '2017-09-09', '常规保养', '1', 1233, '00', '199', 'jiachao@qq.com'),
+	('53EC75B43A9C4BEC98B1F5EA4F86CBBF', '2', '1', 'jiachao', '2017-09-09', '常规保养', '2', 1233, '00', '199', 'jiachao@qq.com'),
+	('55F56EFF685448808DB1858CE201F137', '2', '1', 'jiachao', '2017-09-09', '常规保养', '4', 1233, '00', '199', 'jiachao@qq.com'),
+	('572ACC80C8EB422E9BBEE3AD45FD992A', '2', '1', 'jiachao', '2017-09-09', '常规保养', '2', 1233, '00', '199', 'jiachao@qq.com'),
+	('68DFD98E184D47FC9BE3FA76279B017D', 'D5CE02D4053540088CDE1888D2FADD71', '28634F54F1934808BACFEC68A0F16F55', '范乐天', '2017.6.4', '喷油嘴', '3', 875, '', '13333333333', '88888888888'),
+	('8A86042B9C824298AD2595AAF4101E51', 'D5CE02D4053540088CDE1888D2FADD71', '28634F54F1934808BACFEC68A0F16F55', '贾超', '2017.7.7', '缸内积炭', '3', 432, '', '110', '111'),
+	('A1B9B20BE35D4DE4A3FE66EC41676931', '2', '1', 'jiachao', '2017-09-09', '常规保养', '1', 1233, '00', '199', 'jiachao@qq.com'),
+	('A70B35F7044E4628942FBE15FDAA0DD9', '2', '1', 'jiachao', '2017-09-09', '常规保养', '1', 1233, '00', '199', 'jiachao@qq.com'),
+	('A7CFC8EAC918422AA3F9EEEA0569A310', '2', '1', 'jiachao', '2017-09-09', '常规保养', '4', 1233, '00', '199', 'jiachao@qq.com'),
+	('AE739013FC37400BB334F688C4FE977B', '579967EFF17A4C0EB23DADEF5F903FE4', '28634F54F1934808BACFEC68A0F16F55', 'sgsg', 'fszwsgsg', '机油', '3', 542, 'sgsgsg', 'sgsgse', 'srgsgs'),
+	('BA2FBFFBC05D4B969112481A1A3D5F05', '2', '1', 'jiachao', '2017-09-09', '常规保养', '1', 1233, '00', '199', 'jiachao@qq.com'),
+	('BE505174A34F43A5AA3A0638D24B8578', 'FA7844103F894032B92E3038AC225E62', '28634F54F1934808BACFEC68A0F16F55', 'sgsg', 'fszwsgsg', '防冻液', '2', 328, 'sgsgsg', 'sgsgse', 'srgsgs'),
+	('C457889980914A728FA52D91A5D63CAC', '2', '1', 'jiachao', '2017-09-09', '常规保养', '1', 1233, '00', '199', 'jiachao@qq.com'),
+	('C47A4B7F336E41CD9A67166B5E4F5D24', '2', '1', 'jiachao', '2017-09-09', '常规保养', '2', 1233, '00', '199', 'jiachao@qq.com'),
+	('D902B0628D574A20A0D59C0C6F2749EB', '579967EFF17A4C0EB23DADEF5F903FE4', '28634F54F1934808BACFEC68A0F16F55', 'sgsg', 'fszwsgsg', '机油', '2', 542, 'sgsgsg', 'sgsgse', 'srgsgs'),
+	('DB9C5B10CD4F47F99C6F3B3508E7B073', '2', '111', 'jiachao', '2017.7.7', '常规保养', '1', 1233, NULL, '1220', 'jia@qq.com'),
+	('E1B81E34830D4B4CA18CF9326D3D5061', 'FA7844103F894032B92E3038AC225E62', '28634F54F1934808BACFEC68A0F16F55', '我很纠结w', 'sdfggg', '防冻液', '4', 328, 'djjjd', 'sssss', 'sssss'),
+	('E58B71F93DEB4C63AFF8CFE8E8F8C3BB', '2', '1', 'jiachao', '2017-09-09', '常规保养', '1', 1233, '00', '199', 'jiachao@qq.com'),
+	('EECDA2F8AFA34318AADCFBCE139C221B', '2', '1', 'jiachao', '2017-09-09', '常规保养', '4', 1233, '00', '199', 'jiachao@qq.com'),
+	('F76955EDB5BA422F8684484ED98B1BC3', '2', '1', 'jiachao', '2017-09-09', '常规保养', '1', 1233, '00', '199', 'jiachao@qq.com');
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+
+
+-- 导出  表 marilyzj.repairitems 结构
+CREATE TABLE IF NOT EXISTS `repairitems` (
+  `repairItemsId` int(11) NOT NULL,
+  `repairName` varchar(100) DEFAULT NULL,
+  `remark` varchar(100) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  PRIMARY KEY (`repairItemsId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  marilyzj.repairitems 的数据：~17 rows (大约)
+DELETE FROM `repairitems`;
+/*!40000 ALTER TABLE `repairitems` DISABLE KEYS */;
+INSERT INTO `repairitems` (`repairItemsId`, `repairName`, `remark`, `price`) VALUES
+	(1, '常规保养', NULL, 1233),
+	(2, '大型保养', NULL, 3123),
+	(3, '机修', NULL, 341),
+	(101, '机油', NULL, 542),
+	(102, '机滤', NULL, 200),
+	(103, '空滤', NULL, 321),
+	(104, '空调滤', NULL, 324),
+	(201, '更换变速油箱', NULL, 564),
+	(202, '更换火花塞', NULL, 100),
+	(203, '更换助力油', NULL, 232),
+	(204, '防冻液', NULL, 328),
+	(205, '缸内积炭', NULL, 432),
+	(206, '清洗节气门', NULL, 213),
+	(207, '喷油嘴', NULL, 875),
+	(208, '进气道', NULL, 123),
+	(20101, '手动更换', NULL, 234),
+	(20102, '机器更换', NULL, 324);
+/*!40000 ALTER TABLE `repairitems` ENABLE KEYS */;
+
+
+-- 导出  表 marilyzj.user 结构
+CREATE TABLE IF NOT EXISTS `user` (
+  `userId` varchar(50) NOT NULL,
+  `userName` varchar(100) DEFAULT NULL,
+  `loginName` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `sex` varchar(50) DEFAULT NULL,
+  `phone` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `remark` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  marilyzj.user 的数据：~4 rows (大约)
+DELETE FROM `user`;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` (`userId`, `userName`, `loginName`, `password`, `sex`, `phone`, `email`, `remark`) VALUES
+	('28634F54F1934808BACFEC68A0F16F55', '111', '444', '444', NULL, NULL, NULL, NULL),
+	('7CFADB52AA434577BAD464DAFE0C9781', NULL, '22', '123', NULL, NULL, NULL, NULL),
+	('7A24B3F94D5649B7BAD9EABCBB4EAC61', NULL, '21', '12', NULL, NULL, NULL, NULL),
+	('C79D2EDF651A46D78397D0B2A674EFC0', 'jiachao', '222', '2222', NULL, '123456', NULL, NULL);
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+
+
+-- 导出  表 marilyzj.userorder 结构
+CREATE TABLE IF NOT EXISTS `userorder` (
+  `orderId` varchar(50) DEFAULT NULL,
+  `userId` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 正在导出表  marilyzj.userorder 的数据：~21 rows (大约)
+DELETE FROM `userorder`;
+/*!40000 ALTER TABLE `userorder` DISABLE KEYS */;
+INSERT INTO `userorder` (`orderId`, `userId`) VALUES
+	('EECDA2F8AFA34318AADCFBCE139C221B', '1'),
+	('A7CFC8EAC918422AA3F9EEEA0569A310', '1'),
+	('55F56EFF685448808DB1858CE201F137', '1'),
+	('BA2FBFFBC05D4B969112481A1A3D5F05', '1'),
+	('572ACC80C8EB422E9BBEE3AD45FD992A', '1'),
+	('27C974AC866A4774889780C1C8DD99AE', '1'),
+	('53EC75B43A9C4BEC98B1F5EA4F86CBBF', '1'),
+	('1F228A6FA9CB4D68B8D2193D06B2BE10', '1'),
+	('A1B9B20BE35D4DE4A3FE66EC41676931', '1'),
+	('03A01286CB69458D9632CA02BFA89852', '1'),
+	('E58B71F93DEB4C63AFF8CFE8E8F8C3BB', '1'),
+	('A70B35F7044E4628942FBE15FDAA0DD9', '1'),
+	('3E7F4D83C29B402EACD613D03FE9FF36', '1'),
+	('F76955EDB5BA422F8684484ED98B1BC3', '1'),
+	('065D50E7EDA046ED84C7CA84767CCBAE', '1'),
+	('C457889980914A728FA52D91A5D63CAC', '1'),
+	('BE505174A34F43A5AA3A0638D24B8578', '28634F54F1934808BACFEC68A0F16F55'),
+	('D902B0628D574A20A0D59C0C6F2749EB', '28634F54F1934808BACFEC68A0F16F55'),
+	('E1B81E34830D4B4CA18CF9326D3D5061', '28634F54F1934808BACFEC68A0F16F55'),
+	('AE739013FC37400BB334F688C4FE977B', '28634F54F1934808BACFEC68A0F16F55'),
+	('68DFD98E184D47FC9BE3FA76279B017D', '28634F54F1934808BACFEC68A0F16F55'),
+	('8A86042B9C824298AD2595AAF4101E51', '28634F54F1934808BACFEC68A0F16F55');
+/*!40000 ALTER TABLE `userorder` ENABLE KEYS */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

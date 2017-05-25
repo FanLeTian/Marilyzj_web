@@ -1,0 +1,115 @@
+{
+    "code": "0",
+    "msg": "成功",
+    "obj": {
+       "reslut":  [
+    {
+        "repairItemsId": "1",
+        "repairName": "常规保养",
+        "repairPrice": "20"
+    },
+    {
+        "repairItemsId": "101",
+        "repairName": "机油",
+        "repairPrice": "20"
+    },
+    {
+        "repairItemsId": "102",
+        "repairName": "机滤",        
+        "repairPrice": "20"
+    },
+    {
+        "repairItemsId": "103",
+        "repairName": "空滤",
+        "repairPrice": "20"
+    },
+    {
+        "repairItemsId": "104",
+        "repairName": "空调滤",
+        "repairPrice": "20"
+    }
+	]
+    }
+}
+
+
+产品详情页数据
+
+{
+    "code": "0",
+    "msg": "成功",
+    "obj": {
+    	"repairItemsId": "104",
+        "repairName": "空调滤",
+        "repairPrice": "20",
+        "repairAdd": "纽约大道",
+        "repairChangJia": "陕西通用",
+        "repairPhone": "02180808080"
+
+    }
+}
+
+
+订单列表数据 
+
+{
+    "code": "0",
+    "msg": "成功",
+    "obj": {
+    	 "userId": "dadlakdla",
+    	 "orderListType": "0",
+    	 "reslut":  [
+    {
+        "orderId": "1111",
+        "orderType": "0",
+        "repairItemsId": "104",
+        "repairName": "空调滤",
+        "repairPrice": "20",
+        "repairAdd": "纽约大道",
+        "repairChangJia": "陕西通用",
+        "repairPhone": "02180808080"
+    }, 
+    {
+        "orderId": "1111",
+        "orderType": "0",
+        "repairItemsId": "104",
+        "repairName": "空调滤",
+        "repairPrice": "20",
+        "repairAdd": "纽约大道",
+        "repairChangJia": "陕西通用",
+        "repairPhone": "02180808080"
+    },
+    {
+        "orderId": "1111",
+        "orderType": "0",
+        "repairItemsId": "104",
+        "repairName": "空调滤",
+        "repairPrice": "20",
+        "repairAdd": "纽约大道",
+        "repairChangJia": "陕西通用",
+        "repairPhone": "02180808080"
+    }
+	]
+    }
+}
+
+
+订单详情页数据 
+
+{
+    "code": "0",
+    "msg": "成功",
+    "obj": {
+    	"orderId": "1111",
+        "orderType": "0",
+        "creatTime": "123419924294",
+        "endTime": "23293298329",
+        "completeTime": "123141242141",
+    	"repairItemsId": "104",
+        "repairName": "空调滤",
+        "repairPrice": "20",
+        "repairAdd": "纽约大道",
+        "repairChangJia": "陕西通用",
+        "repairPhone": "02180808080"
+    }
+}

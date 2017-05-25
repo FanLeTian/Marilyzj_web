@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:web="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>HSE</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>encoding</param-name>
+    <param-value>UTF-8</param-value>
+  </context-param>
+  <filter>
+		<filter-name>encoding</filter-name>
+		<filter-class>com.marilyzj.filter.EncodingFilter</filter-class>
+  </filter>
+  
+   <!--用户模块 -->
+   <servlet>
+    <servlet-name>User</servlet-name>
+    <servlet-class>com.marilyzj.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>User</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  <!--订单模块 -->
+  <servlet>
+    <servlet-name>Order</servlet-name>
+    <servlet-class>com.marilyzj.servlet.OrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Order</servlet-name>
+    <url-pattern>/OrderServlet</url-pattern>
+  </servlet-mapping>
+  <!--接口配置-->
+   <!--用户接口-->
+  <servlet>
+    <servlet-name>WebUser</servlet-name>
+    <servlet-class>com.marilyzj.web.WebUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WebUser</servlet-name>
+    <url-pattern>/UserInfo</url-pattern>
+  </servlet-mapping>
+  
+  <!--维修项目接口-->
+  <servlet>
+    <servlet-name>WebRepairItems</servlet-name>
+    <servlet-class>com.marilyzj.web.WebRepairItems</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WebRepairItems</servlet-name>
+    <url-pattern>/RepairItems</url-pattern>
+  </servlet-mapping>
+  
+   <!--单位接口-->
+  <servlet>
+    <servlet-name>WebDept</servlet-name>
+    <servlet-class>com.marilyzj.web.WebDept</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WebDept</servlet-name>
+    <url-pattern>/DeptInfo</url-pattern>
+  </servlet-mapping>
+   <!--订单接口-->
+  <servlet>
+    <servlet-name>WebOrder</servlet-name>
+    <servlet-class>com.marilyzj.web.WebOrder</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WebOrder</servlet-name>
+    <url-pattern>/OrderInfo</url-pattern>
+  </servlet-mapping>
+</web-app>
